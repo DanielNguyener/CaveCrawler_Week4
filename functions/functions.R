@@ -16,7 +16,9 @@ TranscTable <- function(morph1, morph2, condition, direction, tr.stat, tr.thresh
   # If condition is NOT "Between morph"...
   if(condition != "Between morph"){
     # Use transcription data of morph-control comparisons
-    in_table <- data.frame()
+    # empty dataframe for control condition
+    condition_control <- data.frame()
+    in_table <- condition_control
     # Set morph2 to control
     morph2 <- "Control"
     # Set grep pattern to morph1

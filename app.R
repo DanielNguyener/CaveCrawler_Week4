@@ -84,6 +84,9 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+  #empty data frame for control.
+  condition_control <- data.frame()
+  
   observe({
     
     transc_morph_choices <- c("Control", "Rio Choy")
